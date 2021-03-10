@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{%block content%}
+<body>
+<h1>I'M SO SORRY FOR YOU :</h1>
+
+<h2>Oh... hey {{user.name}}... say hello to Jack for me.</h2>
+<h3>You got only {{user.prob}}% of chance to survive, sorry about that.</h3>
+
+<center>
+     <img src="{{ url_for('static', filename='jack_titanic.png') }}"
+         alt="frozen_jack"
+         height="400px"
+         width="800px"
+</center>
+
+<p>YOU ARE DEAD</p>
+
+{% endblock%}

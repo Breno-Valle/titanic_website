@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="col-md-4 col-md-offset-4">
+  <form method="POST" action="/">
+    <h2>Your caracteristics</h2>
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <div class="notification is-danger">
+      {{ messages[0] }}
+    </div>
+    {% endif %} {% endwith %}
+    <div class="form-group">
+      <label for="user_age">Your Age:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="user_age"
+        name="user_age"
+        aria-describedby="UserAgeHelp"
+        placeholder="Enter here your age"
+      />
+    <div class="form-group">
+      <label for="user_fare">Your Fare:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="user_fare"
+        name="user_fare"
+        aria-describedby="UserFareHelp"
+        placeholder="Enter here your probably Fare"
+      />
+    </div>
+    <div class="form-group">
+      <label for="user_pclass">Your Pclass</label>
+      <input
+        type="text"
+        class="form-control"
+        id="user_pclass"
+        name="user_pclass"
+        aria-describedby="UserPclassHelp"
+        placeholder="Enter here which you probably would be."
+      />
+    <div class="form-group">
+      <label for="user_parch">Number of Parch</label>
+      <input
+        type="text"
+        class="form-control"
+        id="user_parch"
+        name="user_parch"
+        aria-describedby="UserParchHelp"
+        placeholder="Enter here the number of Parch."
+      />
+    <div class="form-group">
+      <label for="user_sex">Your Sex ( 0 - for female/ 1 - for male</label>
+      <input
+        type="text"
+        class="form-control"
+        id="user_sex"
+        name="user_sex"
+        aria-describedby="UserSexHelp"
+        placeholder="Enter here the sex you are part of."
+      />
+    <div class="form-group">
+      <label for="user_sibsp">Your SibSp</label>
+      <input
+        type="text"
+        class="form-control"
+        id="user_sibsp"
+        name="user_sibsp"
+        aria-describedby="UserSibSpHelp"
+        placeholder="Enter here your SibSp."
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Discover</button>
+  </form>
+</div>
+{% endblock %}

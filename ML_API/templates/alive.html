@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{%block content%}
+<body>
+<h1>YOU ARE A FORTUNATE ONE</h1>
+
+<h2>Hello {{user.name}}, its's good to see you alive!</h2>
+<h3>You got {{user.prob}}% of chance to survive, that's a pretty good number</h3>
+
+<center>
+
+    <img src="{{ url_for('static', filename='rose_titanic.png') }}"
+         alt="not_frozen_rose"
+         height="400px"
+         width="800px"
+</center>
+
+<p>YOU ARE ALIVE!!!</p>
+
+{% endblock%}
